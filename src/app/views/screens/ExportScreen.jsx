@@ -1,8 +1,17 @@
 import React from 'react';
 // project
+import ScreenFooter from './../commons/ScreenFooter';
 import ReactAceEditor from './../commons/ReactAceEditor';
 
 class ExportScreen extends React.PureComponent {
+
+  _onClickSubmitHandler (e) {
+    e.preventDefault();
+    this.setState({
+      jsonisvalid: false,
+      currentstep: this._stepsIterator.next().value
+    });
+  }
 
   _renderTextArea () {
     const string = (this.props.selectexport < 0)
@@ -25,6 +34,8 @@ class ExportScreen extends React.PureComponent {
             usecopy={false}
             jsonstring={JSON.stringify(string, null, '  ')} />
         </div>
+        <ScreenFooter cancelClickHandler={false}
+          submitClickHandler={e => this._onClickSubmitHandler(e)} />
       </div>
     );
   }

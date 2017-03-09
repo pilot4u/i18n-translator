@@ -3,8 +3,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import isempty from 'lodash.isempty';
 // lib
-import GoogleAnalytics from './../core/views/GoogleAnalytics';
-import GithubOctocatCorner from './../core/views/GithubOctocatCorner';
+import { GoogleAnalytics, GithubOctocatCorner } from 'flux-core-lib';
 // application
 import './Application.css';
 import Constants from './constants';

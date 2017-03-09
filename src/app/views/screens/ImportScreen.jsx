@@ -1,11 +1,10 @@
 import React from 'react';
 import isempty from 'lodash.isempty';
+import { ObjectUtils, StepsIterator } from 'flux-core-lib';
 // project
 import Constants from './../../constants';
 import ScreenFooter from './../commons/ScreenFooter';
 import ReactAceEditor from './../commons/ReactAceEditor';
-import { entries } from './../../../core/utils/ObjectUtils';
-import StepsIterator from './../../../core/iterators/StepsIterator';
 
 class ImportScreen extends React.PureComponent {
 
@@ -175,7 +174,7 @@ class ImportScreen extends React.PureComponent {
         <p style={{
           marginTop: '0'
         }}>
-          {entries(languages)
+          {ObjectUtils.entries(languages)
             .filter(([key]) => (this.props.langs.indexOf(key) === -1))
             .map(([key, val]) =>
               <label key={`radio-${key}`}

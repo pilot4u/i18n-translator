@@ -1,4 +1,4 @@
-import AbstractAction from './../../core/abstracts/AbstractAction';
+import { AbstractAction } from 'flux-core-lib';
 // lib
 import Constants from './../constants';
 

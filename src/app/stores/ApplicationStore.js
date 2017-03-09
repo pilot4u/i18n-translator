@@ -1,11 +1,9 @@
 import isempty from 'lodash.isempty';
 import isstring from 'lodash.isstring';
 import { diff, apply } from 'rus-diff';
+import { ArrayUtils, AbstractStore, ObjectUtils } from 'flux-core-lib';
 // project
 import Constants from './../constants';
-import { alphasort } from './../../core/utils/ArrayUtils';
-import AbstractStore from './../../core/abstracts/AbstractStore';
-import { fillwith, clone } from './../../core/utils/ObjectUtils';
 
 class ApplicationStore extends AbstractStore {
 
@@ -48,7 +46,7 @@ class ApplicationStore extends AbstractStore {
     const langs = this.getState('langs').concat([langkey]);
 
     // preserve originals values
-    origin[langkey] = clone(values);
+    origin[langkey] = ObjectUtils.clone(values);
 
     let primarykeys = this.getState('primarykeys');
     primarykeys = Object.keys(values)
@@ -57,11 +55,11 @@ class ApplicationStore extends AbstractStore {
       // add to current primary keys
       .concat(primarykeys)
       // sort by alpha order
-      .sort(alphasort);
+      .sort(ArrayUtils.alphasort);
 
     values = this.getState('values')
       .concat([values])
-      .map(obj => fillwith(obj, primarykeys));
+      .map(obj => ObjectUtils.fillwith(obj, primarykeys));
 
     this.setState({
       langs,

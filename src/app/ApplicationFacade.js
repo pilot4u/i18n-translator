@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { AbstractFacade } from 'flux-core-lib';
 // core
-import { AbstractFacade } from '../core/abstracts';
 import stores from './stores';
 import actions from './actions';
 import services from './services';

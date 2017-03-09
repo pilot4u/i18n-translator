@@ -1,8 +1,8 @@
-import { toMap } from './../../core/utils/ObjectUtils';
+import { ObjectUtils } from 'flux-core-lib';
 // project
 import ApplicationStore from './ApplicationStore';
 
-const imports = toMap({
+const imports = ObjectUtils.toMap({
   ApplicationStore
 });
 

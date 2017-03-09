@@ -1,8 +1,7 @@
 import React from 'react';
+import { GithubStarButton, TwitterShareButton } from 'flux-core-lib';
 // project
 import logo from './../../assets/json_logo.svg';
-import GithubStarButton from './../../core/views/GithubStarButton';
-import TwitterShareButton from './../../core/views/TwitterShareButton';
 
 const ApplicationHeader = props => (
   <div className="application-header flex-columns flex-space-around"

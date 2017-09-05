@@ -19,7 +19,7 @@ class ImportScreen extends React.PureComponent {
       () => this.renderLoadMoreContent.bind(this)
     ]);
 
-    let defaultvalue = '// Put your JSON code to start working with your translations';
+    let defaultvalue = '{ "first_key": "Put your JSON content here" }';
     if (!isempty(props.primarykeys)) {
       defaultvalue = props.primarykeys
         .reduce((obj, key) => Object.assign(obj, { [key]: '' }), {});

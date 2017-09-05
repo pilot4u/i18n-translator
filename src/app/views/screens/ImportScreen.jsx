@@ -259,7 +259,7 @@ ImportScreen.propTypes = {
 };
 
 ImportScreen.defaultProps = {
-  defaultvalue: '// Put your JSON code to start working with your translations'
+  defaultvalue: '{ "first_key": "Put your JSON content here" }'
 };
 
 export default ImportScreen;

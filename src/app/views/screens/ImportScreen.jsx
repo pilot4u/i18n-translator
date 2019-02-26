@@ -14,7 +14,7 @@ class ImportScreen extends React.PureComponent {
     super(props);
     this._ismounted = false;
     this._stepsIterator = StepsIterator([
-      () => this.renderFileImportStep.bind(this),
+       () => this.renderFileImportStep.bind(this),
       // question: is it a description file
       () => this.renderSelectLanguage.bind(this),
       // question: import another language
@@ -166,6 +166,8 @@ class ImportScreen extends React.PureComponent {
     const languages = {
       // using language keys RFC 3066
       'en-US': 'English',
+      'he-IL': 'Hebrew',
+      'ru-RU': 'Russian',
       'it-IT': 'Italian',
       'fr-FR': 'French',
       'es-ES': 'Spanish',

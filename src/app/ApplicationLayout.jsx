@@ -179,7 +179,7 @@ class ApplicationLayout extends React.Component {
               position: 'relative',
               background: '#FBFBFB'
             }}>
-            <ApplicationHeader appname={this.props.appname} />
+            {/* <ApplicationHeader appname={this.props.appname} /> */}
           </div>
           {<ApplicationMenu langs={this.state.langs}
             selectexport={this.state.selectexport}
